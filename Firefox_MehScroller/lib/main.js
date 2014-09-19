@@ -11,7 +11,7 @@ var button = require("sdk/ui/button/action").ActionButton({
     onClick: function () {
         console.log('Scrolling to next unread reply');
         require("sdk/tabs").activeTab.attach({
-            contentScriptFile: self.data.url("replyScroll.js")
+            contentScriptFile: [self.data.url("jquery-2.1.1.min.js"), self.data.url("replyScroll.js")]
         });
     }
 });

@@ -1,9 +1,9 @@
 {
   "name": "firefox_mehscroller",
-  "title": "Firefox_MehScroller",
+  "title": "Unofficial Meh.com Forum Unread Reply Scroller",
   "id": "jid1-qHxXiYlzw643Ew",
-  "description": "a basic add-on",
-  "author": "",
+  "description": "This extension scrolls to the next unread thread/comment/reply on meh.com's forum.",
+  "author": "Josh Hoffman",
   "license": "MPL 2.0",
-  "version": "1.0"
+  "version": "1.1"
 }

@@ -5,33 +5,25 @@
 /*  Do not modify without permission. No warranty expressed or implied.                     */   
 /********************************************************************************************/
 
-if (document.getElementById("CommentCounter") == null) {
-    var input = document.createElement("input");
-    input.setAttribute("type", "hidden");
-    input.setAttribute("name", "CommentCounter");
-    input.setAttribute("id", "CommentCounter");
-    input.setAttribute("value", "-1");
-
-    document.body.appendChild(input);
+if (!$('#CommentCounter').length) {
+    $('<input>').attr({
+        type: 'hidden',
+        id: 'CommentCounter',
+        name: 'CommentCounter',
+        value: '-1'
+    }).appendTo('body');
 }
 
-var cc = document.getElementById("CommentCounter");
-var i = parseInt(cc.getAttribute("value"));
+var i = parseInt($('#CommentCounter').val());
+var unreadElements = $('.unread');
 
-var unreadComments = [];
-var lis = document.querySelectorAll('li');
-
-for (var x = 0; x < lis.length; x++)
-    if (lis[x].className == "reply unread" || lis[x].className == "comment unread")
-        unreadComments.push(lis[x]);
-
-if (unreadComments.length == 0)
+if (unreadElements.length == 0)
     alert('There are no unread replies in this thread');
 else {
-    if (i >= unreadComments.length - 1)
+    if (i >= unreadElements.length - 1)
         i = -1;
 
-    unreadComments[++i].scrollIntoView();
+    unreadElements[++i].scrollIntoView();
 
-    cc.setAttribute("value", i.toString());
+    $('#CommentCounter').val(i.toString());
 }

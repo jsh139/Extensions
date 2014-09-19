@@ -2,21 +2,26 @@
   "manifest_version": 2,
 
   "name": "Unofficial Meh.com Forum Unread Reply Scroller",
-  "description": "This extension scrolls to the next unread reply on meh.com's forum.",
+  "description": "This extension scrolls to the next unread thread/comment/reply on meh.com's forum.",
   "version": "1.0",
 
   "permissions": [
-    "activeTab"
+    "tabs", "https://meh.com/forum/*"
   ],
   "background": {
-	"scripts": ["browserAction.js"],
- 	"persistent": false
+	"scripts": ["background.js"]
   },
-  "browser_action": {
-    "default_title": "Scroll to next unread reply",
+  "page_action": {
+    "default_title": "Scroll to next unread",
 	"default_icon": "icon16.png" 
   },
+  "content_scripts": [
+    {
+      "matches": ["https://meh.com/forum/*"],
+      "js": ["jquery-2.1.1.min.js"]
+    }
+  ],
   "icons": { "16": "icon16.png",
-           "48": "icon48.png",
-          "128": "icon128.png" }
+             "48": "icon48.png",
+            "128": "icon128.png" }
 }

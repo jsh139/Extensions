@@ -3,7 +3,7 @@
 
   "name": "Unofficial Meh.com Forum Unread Reply Scroller",
   "description": "This extension scrolls to the next unread thread/comment/reply on meh.com's forum.",
-  "version": "1.0",
+  "version": "1.1",
 
   "permissions": [
     "tabs", "https://meh.com/forum/*"

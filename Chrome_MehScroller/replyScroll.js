@@ -26,6 +26,10 @@ var i = parseInt($('#CommentCounter').val());
 var unreadElements = $('.unread');
 
 if (unreadElements.length > 0) {
+    /* Click the archive button in case there are unread replies in there */
+    if ($('.view-archive').is(':visible'))
+        $('.view-archive').click();
+
     if (i >= unreadElements.length - 1) {
         i = -1;
         DisplayMessage('Reached end of thread, scrolling to first unread');

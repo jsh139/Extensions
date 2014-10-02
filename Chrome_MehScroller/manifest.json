@@ -4,10 +4,10 @@
   "name": "Unofficial Meh.com Forum Unread Scroller",
   "short_name": "Meh Scroller",
   "description": "This extension scrolls to the next unread thread/comment/reply on meh.com's forum.",
-  "version": "1.2",
+  "version": "1.3",
 
   "permissions": [
-    "tabs", "https://meh.com/forum/*"
+    "tabs", "https://meh.com/forum/*", "https://mediocre.com/forum/*"
   ],
   "background": {
 	"scripts": ["background.js"]
@@ -18,7 +18,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://meh.com/forum/*"],
+      "matches": ["https://meh.com/forum/*", "https://mediocre.com/forum/*"],
       "js": ["jquery-2.1.1.min.js"]
     }
   ],

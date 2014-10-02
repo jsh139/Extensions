@@ -1,5 +1,5 @@
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-    if (~tab.url.indexOf('meh.com/forum')) {
+    if (~tab.url.indexOf('meh.com/forum') || ~tab.url.indexOf('mediocre.com/forum')) {
 //        console.log('background tab id is:' + tabId);
         chrome.pageAction.show(tabId);
     }

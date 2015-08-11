@@ -1,6 +1,6 @@
 ﻿/********************************************************************************************/
 /*  Unofficial Meh.com Forum Reply Scroller                                                 */
-/*  Copyright © 2014 Josh Hoffman.  All rights reserved.                                    */
+/*  Copyright © 2015 Josh Hoffman.  All rights reserved.                                    */
 /*                                                                                          */
 /*  Do not modify without permission. No warranty expressed or implied.                     */
 /********************************************************************************************/

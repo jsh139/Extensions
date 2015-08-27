@@ -5,6 +5,8 @@
 /*  Do not modify without permission. No warranty expressed or implied.                     */
 /********************************************************************************************/
 
+var unreadElements = $('.unread');
+
 if (!$('#CommentCounter').length) {
     $('<input>').attr({
         type: 'hidden',
@@ -23,12 +25,11 @@ if (!$('#CommentCounter').length) {
 }
 
 var i = parseInt($('#CommentCounter').val());
-var unreadElements = $('.unread');
 
 if (unreadElements.length > 0) {
     /* Click the archive button in case there are unread replies in there */
-    if ($('.view-archive').is(':visible'))
-        $('.view-archive').click();
+    if ($('.show-comments').is(':visible'))
+        $('.show-comments')[0].click();
 
     if (i >= unreadElements.length - 1) {
         i = -1;

@@ -4,7 +4,7 @@
   "name": "Unofficial Meh.com Forum Unread Scroller",
   "short_name": "Meh Scroller",
   "description": "This extension scrolls to the next unread thread/comment/reply on meh.com's forum.",
-  "version": "1.4",
+  "version": "1.5",
 
   "permissions": [
     "tabs", "https://meh.com/forum/*", "https://mediocre.com/forum/*", "https://drone.horse/forum/*"

@@ -21,14 +21,10 @@ function detachWorker(worker, workerArray) {
     }
 }
 
-var button = require("sdk/ui/button/action").ActionButton({
+require("sdk/widget").Widget({
     id: "Meh-Scroller",
     label: "Scroll to next unread reply",
-    icon: {
-        "16": "./icon16.png",
-        "32": "./icon32.png",
-        "64": "./icon64.png"
-    },
+    contentUrl: self.url("icon16.png"),
     onClick: function () {
         for (var i = 0; i < workers.length; i++) {
             if (workers[i].tab == tab.activeTab) {
